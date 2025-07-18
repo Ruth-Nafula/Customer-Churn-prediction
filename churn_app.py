@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-df = pd.read_csv(r"C:\Users\rutha\OneDrive\Documents\Customer Churn Project\WA_Fn-UseC_-Telco-Customer-Churn (1).csv")
+df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn (1).csv")
 df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce') # Convert TotalCharges from string to numeric.
 df = df.dropna(subset=['TotalCharges']) # Drop rows where TotalCharges is missing.
 df = df.drop(columns=['customerID']) #Drop customerid as it is not needed.
